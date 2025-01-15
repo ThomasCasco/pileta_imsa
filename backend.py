@@ -53,7 +53,7 @@ def generar_credencial():
     # Agregar logo
     logo_path = "logo2.jpg"  # Ruta al logo de la empresa
     if os.path.exists(logo_path):
-        pdf.image(logo_path, x=37.5, y=3, w=30)  # Ajustar posición y tamaño del logo
+        pdf.image(logo_path, x=36, y=-4 , w=35)  # Ajustar posición y tamaño del logo
     else:
         print(f"Advertencia: No se encontró el archivo del logo en {logo_path}")
 
@@ -63,12 +63,7 @@ def generar_credencial():
     pdf.cell(0, 10, "IMSA - Credencial para la Pileta", ln=True, align='C')
     pdf.ln(10)
 
-    # Subtítulo decorativo
-    pdf.set_font("Arial", size=10)
-    pdf.set_text_color(255, 107, 107)  # Coral
-    pdf.cell(0, 10, "Bienvenido al Verano", ln=True, align='C')
-    pdf.ln(10)
-
+ 
     # Información del empleado
     pdf.set_font("Arial", size=10)
     pdf.set_text_color(0, 0, 0)
